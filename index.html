@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="eu" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filosofiaren Historia · Batxilergoa 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0f13;--surface:#1a1a24;--surface2:#22222e;--border:#2e2e42;--text:#e8e8f0;--text-muted:#888899;--accent:#c9a84c;--blue:#5b8dee;--font-body:'Source Sans 3',sans-serif;--font-title:'Playfair Display',serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f5f4ef;--surface:#ffffff;--surface2:#ededea;--border:#d8d6cc;--text:#1a1a26;--text-muted:#666677}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:clamp(15px,1.6vw,17px);line-height:1.65;min-height:100vh}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;padding:6px 16px;min-height:46px}
+.nav-brand{font-family:var(--font-mono);font-size:11px;color:var(--accent);font-weight:600;letter-spacing:.06em;flex:1}
+#navbar button{font-family:var(--font-mono);font-size:11px;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);border-radius:4px;padding:4px 10px;cursor:pointer}
+main{max-width:860px;margin:0 auto;padding:80px 24px 60px}
+.site-header{margin-bottom:52px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+.site-kode{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.08em;margin-bottom:12px}
+.site-title{font-family:var(--font-title);font-size:clamp(2.4rem,6vw,4rem);color:var(--accent);line-height:1.05;margin-bottom:.3em}
+.site-sub{font-family:var(--font-mono);font-size:.82em;color:var(--text-muted)}
+.section{margin-bottom:48px}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.section-label{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--text-muted)}
+.section-title{font-family:var(--font-title);font-size:1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:18px 20px;text-decoration:none;color:inherit;display:block;transition:border-color .2s,transform .15s}
+.card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.card.disabled{opacity:.45;pointer-events:none}
+.card-icon{font-size:1.4rem;margin-bottom:8px}
+.card-izena{font-family:var(--font-title);font-size:1rem;margin-bottom:4px}
+.card-desc{font-size:.83em;color:var(--text-muted);line-height:1.4}
+.cc-footer{margin-top:60px;padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-family:var(--font-mono);font-size:10.5px;color:var(--text-muted)}
+.cc-footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav id="navbar"><span class="nav-brand">Filosofiaren Historia · Batx. 2</span><button onclick="toggleTheme()" id="btn-theme">☀</button></nav>
+<main>
+<header class="site-header">
+<div class="site-kode">Filosofiaren Historia · Batxilergoa 2 · D eredua · 2026–27</div>
+<h1 class="site-title">Filosofiaren Historia</h1>
+<p class="site-sub">Ebaluazio-baliabideak · Aurkezpenak · IES Minas BHI, Barakaldo</p>
+</header>
+<section class="section">
+<div class="section-header"><span class="section-label">Baliabideak</span><h2 class="section-title">Ebaluazioa</h2></div>
+<div class="grid">
+<a class="card" href="ebaluazioa/ikasleentzat/"><div class="card-icon">🧭</div><div class="card-izena">Nola funtzionatzen du ikasgaiak →</div><div class="card-desc">Txandak, hiru ariketak, errubrikak, egoera metatua, kronograma taldez talde, eta Filosofia gainditu gabe dutenentzako atala.</div></a>
+<a class="card" href="ebaluazioa/ikasleentzat/#errubrikak"><div class="card-icon">📋</div><div class="card-izena">Errubrikak →</div><div class="card-desc">A, B eta C errubrikak, ikasturte osoan berdinak eta proba-orrian inprimatuak.</div></a>
+<a class="card" href="kronograma/"><div class="card-icon">📅</div><div class="card-izena">Kronograma →</div><div class="card-desc">Saio bakoitzaren data 2A, 2B eta 2C taldeetan.</div></a>
+</div>
+</section>
+<section class="section">
+<div class="section-header"><span class="section-label">01–22</span><h2 class="section-title">Gaiak</h2></div>
+<div class="grid"><a class="card disabled" href="#"><div class="card-icon">🏛</div><div class="card-izena">Aurkezpenak</div><div class="card-desc">Laster.</div></a></div>
+</section>
+<footer class="cc-footer">Eukeni Acebal, <span id="cc-year"></span> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · Elaborado con asistencia de IA (Claude, Anthropic)</footer>
+</main>
+<script>
+function toggleTheme(){var h=document.documentElement;var l=h.dataset.theme==='light';h.dataset.theme=l?'dark':'light';document.getElementById('btn-theme').textContent=l?'☀':'🌙'}
+document.getElementById('cc-year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
